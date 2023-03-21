@@ -1,0 +1,102 @@
+/* TEMPLATE STYLING */
+body {
+    margin: 15px auto;
+    max-width: 800px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    height: 80px;
+}
+
+article>p{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 5%;
+    font-size: 1.3em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main>div {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 5%;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    height: 80px;
+}
+
+header, main>div, footer, article {
+    border-radius: 20px;
+    background: lightgreen;
+}
+
+article#listOfQuestions>p{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    font-size: 1.25em;
+}
+
+article#listOfQuestions>span{
+    text-transform: uppercase;
+}
+
+/* MAIN.FORUM STYLING*/
+main.forum {
+}
+
+main.forum>.flex {
+    display: flex;
+}
+
+main.forum>.loginContainers {
+    justify-content: space-between;
+    max-width: 50%;
+    min-width: max-content;
+    width: 420px;
+}
+
+main.forum fieldset {
+
+}
+
+main.forum div {
+    margin: 25px 0px;
+    justify-content: center;
+}
+
+main.forum label, input {
+    display: block;
+}
+
+.isLoggedin {
+    display: none;
+}
+
+.isNotLoggedin {
+    display: none;
+}
+
+main.forum #createQuestions {
+    display: flex;
+    flex-direction: column;
+    margin: 15px auto;
+    max-width: 600px;
+
+}
+
+main.forum #listOfQuestions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

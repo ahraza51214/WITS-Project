@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="ajax.js" defer></script>
+    <script src="questions.js" defer></script>
+    <script src="UI.js" defer></script>
+    <script src="login.js" defer></script>
+
+    <script>
+        // Functions made to make coding easier.
+        function getElem(id){
+            return document.getElementById(id);
+        }
+
+        function getElems(className){
+            return document.getElementsByClassName(className);
+        }
+    </script>
+</head>
+
+<body>
+<header><h1>Ali's Forum</h1></header>
+<article>
+    <p>Welcome to Ali's forum. This forum is made for the purpose of spreading love and knowledge. You can
+        share anything you have on heart or ask about any question that you would like to know more about.</p>
+    <p>To be able to use all the features of this forum you need to sign up your account. After you have signed up, you will
+        be able to log in, create questions, reply to other user's questons and even edit you'r own replies if you regret them.</p>
+</article>
+<main class="forum">
+    <div>
+        <div class="isNotLoggedin flex loginContainers">
+            <fieldset>
+                <label>SIGN UP</label>
+                <label>Name</label>
+                <input id="registerName">
+                <label>Username</label>
+                <input id="registerUsername">
+                <label>Password</label>
+                <input id="registerPassword" type="password">
+                <button onclick="register(getElem('registerName').value, getElem('registerUsername').value, getElem('registerPassword').value)">Signup</button>
+            </fieldset>
+            <fieldset>
+                <label>LOG IN</label>
+                <label>Username</label>
+                <input id="loginUsername">
+                <label>Password</label>
+                <input id="loginPassword" type="password">
+                <button onclick="login(getElem('loginUsername').value, getElem('loginPassword').value)">Login</button>
+            </fieldset>
+        </div>
+        <div id="createQuestions" class="isLoggedin flex">
+            <button onclick="logout()">Log out</button>
+            <h1>Create Questions</h1>
+            <label>Title</label>
+            <input type="text" id="createQuestionTitle">
+            <label>Message</label>
+            <textarea id="createQuestionMessage"></textarea>
+            <button onclick="createQuestion(getElem('createQuestionTitle').value, getElem('createQuestionMessage').value)">Submit</button>
+        </div>
+        <article id="listOfQuestions">
+            <!--
+            <h1>Question 1</h1>
+            <p>Bla bla bla...?</p>
+            <section>
+                <h1>Answers</h1>
+                <p>first answer</p>
+                <p>second answer</p>
+                <p>third answer</p>
+            </section>
+            -->
+        </article>
+    </div>
+</main>
+<footer>
+    <p>This forum is made by Ali Hassan Raza</p>
+</footer>
+</body>
+</html>
